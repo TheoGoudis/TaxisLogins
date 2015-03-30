@@ -6,35 +6,91 @@ import javafx.collections.ObservableList;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
 	
-	private Stage primaryStage;
+	//controllers
+	private MainController mainController;
+	private AddViewController addController;
+	private ClientViewController clientController;
+	private SettingsViewController settingsController;
 	
-	private ObservableList<Person> personData = FXCollections.observableArrayList();
+	//fxml files
+	private String mainFxml="MainLayout.fxml";
+	private String clientFxml="ClientView.fxml";
+	private String settingsFxml="SettingsView.fxml";
+	
+	
+	private Stage stage;
+	private AnchorPane rootLayout;
+	
+	private ObservableList<Client> clientData = FXCollections.observableArrayList();
+	
+	//controllers
 	
 	
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage stage) {
 		try {
 			
-			this.primaryStage=primaryStage;
-			this.primaryStage.setTitle("Taxisnet logins");
+			this.stage=stage;
+			this.stage.setTitle("Taxisnet logins");
+			
+			generateData();
 			
 			initRootLayout();
-			//showPersonList();
-			
+			initClientView();
 			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	private void showPersonList() {
+	public void showClientView(){
+		GridPane grid=((GridPane) rootLayout.lookup("#mGridPane"));
+//		grid.
+	}
+	
+	public void showSettingsView(){
+		GridPane grid=((GridPane) rootLayout.lookup("#mGridPane"));
+		
+	}
+	
+	public void showAddView(){
+		GridPane grid=((GridPane) rootLayout.lookup("#mGridPane"));
+		
+	}
+	
+	public Stage getStage(){
+		return stage;
+	}
+	
+	public ObservableList<Client> getClientData() {
+        return clientData;
+    }
+	
+	private void generateData(){
+		clientData.add(new Client("Name1","LastName1","Username1","Password1",1234567890,1234567890));
+		clientData.add(new Client("Name2","LastName2","Username2","Password2",1234567890,1234567890));
+		clientData.add(new Client("Name3","LastName3","Username3","Password3",1234567890,1234567890));
+		clientData.add(new Client("Name4","LastName4","Username4","Password4",1234567890,1234567890));
+		clientData.add(new Client("Name5","LastName5","Username5","Password5",1234567890,1234567890));
+		clientData.add(new Client("Name6","LastName6","Username6","Password6",1234567890,1234567890));
+		clientData.add(new Client("Name7","LastName7","Username7","Password7",1234567890,1234567890));
+		clientData.add(new Client("Name8","LastName8","Username8","Password8",1234567890,1234567890));
+		clientData.add(new Client("Name9","LastName9","Username9","Password9",1234567890,1234567890));
+		clientData.add(new Client("Name0","LastName0","Username0","Password0",1234567890,1234567890));
+	}
+
+	private void initClientView() {
 		try{
-			
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("ClientView.fxml"));
+			AnchorPane clientView=(AnchorPane) loader.load();
+			((GridPane) rootLayout.lookup("#mGridPane")).add(clientView, 1, 0);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -42,21 +98,21 @@ public class Main extends Application {
 
 	private void initRootLayout() {
 		try{
-			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("TlFxml.fxml"));
-			Scene scene = new Scene(root,900,480);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("MainLayout.fxml"));
+			rootLayout=(AnchorPane) loader.load();
 			
+			
+			Scene scene = new Scene(rootLayout);
+			stage.setScene(scene);
+			stage.show();
+//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());	
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
-
+	
 	public static void main(String[] args) {
 		launch(args);
-		
 	}
 }
