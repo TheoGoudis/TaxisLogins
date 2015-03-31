@@ -3,13 +3,12 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="clientView" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"> <!-- fx:controller="taxislogins.ClientViewController" -->
+<AnchorPane fx:id="clientView" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="10.0" layoutY="10.0" prefViewportHeight="480.0" prefViewportWidth="720.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="10.0" layoutY="10.0" prefViewportHeight="900.0" prefViewportWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <content>
-            <TableView fx:id="tableView" fixedCellSize="0.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+            <TableView fx:id="tableView" fixedCellSize="0.0">
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
@@ -19,6 +18,8 @@
                   <TableColumn editable="false" minWidth="20.0" prefWidth="110.0" text="Username" />
                   <TableColumn editable="false" prefWidth="120.0" text="Password" />
                   <TableColumn editable="false" minWidth="20.0" prefWidth="100.0" text="ΑΦΜ" />
+                  <TableColumn editable="false" minWidth="20.0" prefWidth="100.0" text="AMKA" />
+                  <TableColumn editable="false" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" resizable="false" sortable="false" />
                   <TableColumn editable="false" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" resizable="false" sortable="false" />
                   <TableColumn editable="false" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" resizable="false" sortable="false" />
                </columns>

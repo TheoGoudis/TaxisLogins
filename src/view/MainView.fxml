@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="taxislogins.Main">
    <children>
       <GridPane fx:id="mGridPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -22,9 +22,9 @@
          <children>
             <VBox alignment="TOP_CENTER" maxWidth="250.0" style="-fx-background-color: #666666;">
                <children>
-                  <VBox alignment="TOP_CENTER" style="-fx-background-color: #8c8c8c;">
+                  <VBox alignment="TOP_CENTER" spacing="2.0" style="-fx-background-color: #8c8c8c;">
                      <children>
-                        <Label text="Αναζήτηση κλειδάριθμου" textAlignment="CENTER" textFill="WHITE">
+                        <Label text="Αναζήτηση Πελάτη" textAlignment="CENTER" textFill="WHITE">
                            <VBox.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </VBox.margin>
@@ -32,7 +32,7 @@
                               <Font name="Noto Sans Bold" size="11.0" />
                            </font>
                         </Label>
-                        <Label text="Ονομα" textFill="WHITE">
+                        <Label text="Όνομα" textFill="WHITE">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
@@ -42,7 +42,7 @@
                               <Insets left="5.0" right="5.0" />
                            </VBox.margin>
                         </TextField>
-                        <Label text="Επιθετο" textFill="WHITE">
+                        <Label text="Επίθετο" textFill="WHITE">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
@@ -62,7 +62,7 @@
                               <Insets left="5.0" right="5.0" />
                            </VBox.margin>
                         </TextField>
-                        <Label text="Username" textFill="WHITE">
+                        <Label text="TAXIS Username" textFill="WHITE">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
@@ -83,14 +83,7 @@
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
                         </Button>
-                     </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </VBox>
-                  <VBox spacing="2.0">
-                     <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf;" text="Προβολη Ολων" textFill="WHITE" textOverrun="CLIP">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf;" text="Προβολή Όλων" textFill="WHITE" textOverrun="CLIP">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
@@ -98,12 +91,19 @@
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf;" text="Προσθήκη Ατόμου" textFill="WHITE" textOverrun="CLIP">
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+                  <VBox spacing="4.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf;" text="Εισαγωγή" textFill="WHITE" textOverrun="CLIP">
                            <padding>
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf;" text="Προσθήκη Αρχείου" textFill="WHITE" textOverrun="CLIP">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf;" text="Ρυθμίσεις" textFill="WHITE" textOverrun="CLIP">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
@@ -113,11 +113,20 @@
                         </Button>
                      </children>
                      <VBox.margin>
-                        <Insets top="25.0" />
+                        <Insets top="4.0" />
                      </VBox.margin>
                   </VBox>
                </children>
             </VBox>
+            <TabPane id="tabPane" fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" side="BOTTOM" tabMaxHeight="15.0" tabMaxWidth="500.0" GridPane.columnIndex="1">
+              <tabs>
+                <Tab closable="false" text="Clients">
+                	<content>
+                		<fx:include source="ClientView.fxml"/>
+                	</content>
+                </Tab>
+              </tabs>
+            </TabPane>
          </children>
       </GridPane>
    </children>

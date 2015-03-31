@@ -1,71 +1,37 @@
 package taxislogins;
-	
+
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
 	
-	//controllers
-	private MainController mainController;
-	private AddViewController addController;
-	private ClientViewController clientController;
-	private SettingsViewController settingsController;
-	
 	//fxml files
-	private String mainFxml="MainLayout.fxml";
-	private String clientFxml="ClientView.fxml";
-	private String settingsFxml="SettingsView.fxml";
-	
-	
-	private Stage stage;
-	private AnchorPane rootLayout;
+	private String mainFxml="/view/MainView.fxml";
+	private String clientFxml="/view/ClientView.fxml";
+	private String settingsFxml="/view/SettingsView.fxml";
+	private String addFxml="/view/AddView.fxml";
 	
 	private ObservableList<Client> clientData = FXCollections.observableArrayList();
 	
-	//controllers
-	
+	private Stage stage;
 	
 	@Override
 	public void start(Stage stage) {
 		try {
-			
 			this.stage=stage;
-			this.stage.setTitle("Taxisnet logins");
 			
 			generateData();
-			
 			initRootLayout();
-			initClientView();
 			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-	}
-	
-	public void showClientView(){
-		GridPane grid=((GridPane) rootLayout.lookup("#mGridPane"));
-//		grid.
-	}
-	
-	public void showSettingsView(){
-		GridPane grid=((GridPane) rootLayout.lookup("#mGridPane"));
-		
-	}
-	
-	public void showAddView(){
-		GridPane grid=((GridPane) rootLayout.lookup("#mGridPane"));
-		
-	}
-	
-	public Stage getStage(){
-		return stage;
 	}
 	
 	public ObservableList<Client> getClientData() {
@@ -85,28 +51,16 @@ public class Main extends Application {
 		clientData.add(new Client("Name0","LastName0","Username0","Password0",1234567890,1234567890));
 	}
 
-	private void initClientView() {
-		try{
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("ClientView.fxml"));
-			AnchorPane clientView=(AnchorPane) loader.load();
-			((GridPane) rootLayout.lookup("#mGridPane")).add(clientView, 1, 0);
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	private void initRootLayout() {
 		try{
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("MainLayout.fxml"));
-			rootLayout=(AnchorPane) loader.load();
-			
-			
-			Scene scene = new Scene(rootLayout);
-			stage.setScene(scene);
-			stage.show();
-//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());	
+			stage.setTitle("Taxisnet logins");
+			FXMLLoader loader=new FXMLLoader();
+			Parent root= loader.load(getClass().getResource(mainFxml));
+			Scene scene=new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			this.stage.setScene(scene);
+			this.stage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

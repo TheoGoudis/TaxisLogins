@@ -1,4 +1,4 @@
-package taxislogins;
+package controller;
 
 class AddViewController {
 
