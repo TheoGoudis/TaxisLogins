@@ -8,6 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Tab?>
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="taxislogins.Main">
    <children>
@@ -20,7 +21,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <VBox alignment="TOP_CENTER" maxWidth="250.0" style="-fx-background-color: #666666;">
+            <VBox alignment="TOP_CENTER" maxWidth="250.0" style="-fx-background-color: #666;">
                <children>
                   <VBox alignment="TOP_CENTER" spacing="2.0" style="-fx-background-color: #8c8c8c;">
                      <children>
@@ -29,15 +30,18 @@
                               <Insets bottom="10.0" top="10.0" />
                            </VBox.margin>
                            <font>
-                              <Font name="Noto Sans Bold" size="11.0" />
+                              <Font name="Noto Sans Bold" size="13.0" />
                            </font>
                         </Label>
                         <Label text="Όνομα" textFill="WHITE">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Noto Sans" size="13.0" />
+                           </font>
                         </Label>
-                        <TextField minHeight="30.0">
+                        <TextField fx:id="mainFieldName" minHeight="30.0" style="-fx-background-radius: 0;">
                            <VBox.margin>
                               <Insets left="5.0" right="5.0" />
                            </VBox.margin>
@@ -46,8 +50,11 @@
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Noto Sans" size="13.0" />
+                           </font>
                         </Label>
-                        <TextField minHeight="30.0">
+                        <TextField fx:id="mainFieldLastname" minHeight="30.0" style="-fx-background-radius: 0;">
                            <VBox.margin>
                               <Insets left="5.0" right="5.0" />
                            </VBox.margin>
@@ -56,8 +63,11 @@
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Noto Sans" size="13.0" />
+                           </font>
                         </Label>
-                        <TextField minHeight="30.0">
+                        <TextField fx:id="mainFieldAfm" minHeight="30.0" style="-fx-background-radius: 0;">
                            <VBox.margin>
                               <Insets left="5.0" right="5.0" />
                            </VBox.margin>
@@ -66,13 +76,16 @@
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Noto Sans" size="13.0" />
+                           </font>
                         </Label>
-                        <TextField minHeight="30.0">
+                        <TextField fx:id="mainFieldUsername" minHeight="30.0" style="-fx-background-radius: 0;">
                            <VBox.margin>
                               <Insets left="5.0" right="5.0" />
                            </VBox.margin>
                         </TextField>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf;" text="Αναζήτηση" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="mainBtnSearch" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf; -fx-background-radius: 0;" text="Αναζήτηση" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Noto Sans" size="13.0" />
                            </font>
@@ -83,13 +96,16 @@
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf;" text="Προβολή Όλων" textFill="WHITE" textOverrun="CLIP">
+                        <Button fx:id="mainBtnShowAll" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf; -fx-background-radius: 0;" text="Προβολή Όλων" textFill="WHITE" textOverrun="CLIP">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                            <padding>
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
+                           <font>
+                              <Font name="Noto Sans" size="13.0" />
+                           </font>
                         </Button>
                      </children>
                      <opaqueInsets>
@@ -98,15 +114,29 @@
                   </VBox>
                   <VBox spacing="4.0">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf;" text="Εισαγωγή" textFill="WHITE" textOverrun="CLIP">
+                        <Button fx:id="mainBtnAdd1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf; -fx-background-radius: 0;" text="Προσθήκη" textFill="WHITE" textOverrun="CLIP">
                            <padding>
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
+                           <font>
+                              <Font name="Noto Sans" size="13.0" />
+                           </font>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf;" text="Ρυθμίσεις" textFill="WHITE" textOverrun="CLIP">
+                        <Button fx:id="mainBtnSettings" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #0093cf; -fx-background-radius: 0;" text="Ρυθμίσεις" textFill="WHITE" textOverrun="CLIP">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Noto Sans" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="52.0" mnemonicParsing="false" onAction="#addWebTab" prefWidth="250.0" style="-fx-background-color: #0093cf; -fx-background-radius: 0;" text="AddTab" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font name="Noto Sans" size="13.0" />
+                           </font>
                            <padding>
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
@@ -118,13 +148,14 @@
                   </VBox>
                </children>
             </VBox>
-            <TabPane id="tabPane" fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" side="BOTTOM" tabMaxHeight="15.0" tabMaxWidth="500.0" GridPane.columnIndex="1">
+            <TabPane id="tabPane" fx:id="tabPane" style="-fx-background-color: #666;" tabClosingPolicy="ALL_TABS" tabMaxHeight="15.0" tabMaxWidth="500.0" GridPane.columnIndex="1">
               <tabs>
-                <Tab closable="false" text="Clients">
-                	<content>
-                		<fx:include source="ClientView.fxml"/>
-                	</content>
-                </Tab>
+				<fx:include source="ClientsView.fxml" />
+				<Tab text="Προσθήκη">
+					<content>
+						<fx:include source="AddView.fxml" />
+					</content>
+				</Tab>
               </tabs>
             </TabPane>
          </children>

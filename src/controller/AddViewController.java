@@ -1,5 +1,6 @@
 package controller;
 
-class AddViewController {
-
+public class AddViewController {
+//	private String addFxml="/view/AddView.fxml";
+	
 }

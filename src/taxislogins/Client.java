@@ -1,79 +1,71 @@
 package taxislogins;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-
 public class Client {
 	
-	private StringProperty firstName;
-	private StringProperty lastName;
-	private IntegerProperty afm;
-	private IntegerProperty amka;
-	private StringProperty username;
-	private StringProperty password;
+	public String firstName;
+	private String lastName;
+	private String afm;
+	private String amka;
+	private String username;
+	private String password;
 	
-	Client(){
-		this(null, null, null, null, null, null);
-	}
-
-	public Client(String firstName, String lastName, String username, String password, Integer afm, Integer amka) {
-		this.firstName=new SimpleStringProperty(firstName);
-		this.lastName=new SimpleStringProperty(lastName);
-		this.afm=new SimpleIntegerProperty(afm);
-		this.amka=new SimpleIntegerProperty(amka);
-		this.username=new SimpleStringProperty(username);
-		this.password=new SimpleStringProperty(password);
+	Client(String firstName, String lastName, String username, String password, String afm, String amka) {
+		this.firstName=firstName;
+		this.lastName=lastName;
+		this.afm=afm;
+		this.amka=amka;
+		this.username=username;
+		this.password=password;
+		System.out.println(this.firstName);
 	}
 	
 	
 	public String getFirstName(){
-		return firstName.get();
+		return firstName;
 	}
 	
 	public String getLastName(){
-		return lastName.get();
+		return lastName;
 	}
 
 	
 	public String getUsername(){
-		return username.get();
+		return username;
 	}
 	
 	public String getPassword(){
-		return password.get();
+		return password;
 	}
 	
-	public Integer getAfm(){
-		return afm.get();
+	public String getAfm(){
+		return afm;
 	}
 	
-	public Integer getAmka(){
-		return amka.get();
+	public String getAmka(){
+		return amka;
 	}
 	
 	public void setFirstName(String firstName){
-		this.firstName.set(firstName);
+		this.firstName=firstName;
 	}
 	
 	public void setLastName(String lastName){
-		this.lastName.set(lastName);
+		this.lastName=lastName;
 	}
 	
 	public void setUsername(String username){
-		this.username.set(username);
+		this.username=username;
 	}
 	
 	public void setPassword(String password){
-		this.password.set(password);
+		this.password=password;
 	}
 	
-	public void setAfm(int afm){
-		this.afm.set(afm);
+	public void setAfm(String afm){
+		this.afm=afm;
 	}
 	
-	public void setAmka(int afm){
-		this.amka.set(afm);
+	public void setAmka(String amka){
+		this.amka=amka;
 	}
 }

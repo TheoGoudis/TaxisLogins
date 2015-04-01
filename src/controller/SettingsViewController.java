@@ -1,5 +1,6 @@
 package controller;
 
-class SettingsViewController {
-
+public class SettingsViewController {
+//	private String settingsFxml="/view/SettingsView.fxml";
+	
 }

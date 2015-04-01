@@ -1,8 +1,270 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="750.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddViewController">
+   <children>
+      <VBox layoutX="93.0" layoutY="250.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="400.0" spacing="10.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" spacing="20.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="300.0" prefWidth="450.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Προσθήκη Πελάτη" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Noto Sans" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <GridPane alignment="TOP_CENTER" prefHeight="210.0" prefWidth="600.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+                                 </rowConstraints>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Όνομα" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Επίθετο" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="TAXIS Username" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="TAXIS Password" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="ΑΜΚΑ" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="ΑΦΜ" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.vgrow="NEVER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="4" GridPane.vgrow="NEVER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="5" GridPane.vgrow="NEVER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                    </TextArea>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Κατηγορία" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <ChoiceBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="6" GridPane.vgrow="NEVER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </ChoiceBox>
+                                 </children>
+                              </GridPane>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: #0093cf;" text="Προσθήκη" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Noto Sans" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="300.0" prefWidth="450.0" style="-fx-background-color: white;">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Προσθήκη Αρχείου Πελατών" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Noto Sans" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Σείρετε το αρχείο στην περιοχή ή πατήστε Επιλογή Αρχείου" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Noto Sans" size="10.0" />
+                                 </font>
+                              </Label>
+                              <Rectangle fill="#8c8c8c" height="150.0" smooth="false" stroke="BLACK" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="0.0" width="300.0" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: #0093cf;" text="Επιλογή Αρχείου" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Noto Sans" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Κατηγορία" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <ChoiceBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </ChoiceBox>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="46.0" text="Αρχείο" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="200.0" text="κανένα επιλεγμένο" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: #0093cf;" text="Προσθήκη" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Noto Sans" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
-

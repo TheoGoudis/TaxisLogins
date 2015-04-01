@@ -1,7 +1,0 @@
-package controller;
-
-class MainController {
-	
-	
-	
-}
