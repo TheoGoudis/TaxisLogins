@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
@@ -97,54 +98,6 @@
                                           <Font name="Noto Sans" size="13.0" />
                                        </font>
                                     </Label>
-                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
-                                       <GridPane.margin>
-                                          <Insets left="5.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font name="Noto Sans" size="13.0" />
-                                       </font>
-                                    </TextArea>
-                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
-                                       <GridPane.margin>
-                                          <Insets left="5.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font name="Noto Sans" size="13.0" />
-                                       </font>
-                                    </TextArea>
-                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
-                                       <GridPane.margin>
-                                          <Insets left="5.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font name="Noto Sans" size="13.0" />
-                                       </font>
-                                    </TextArea>
-                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.vgrow="NEVER">
-                                       <GridPane.margin>
-                                          <Insets left="5.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font name="Noto Sans" size="13.0" />
-                                       </font>
-                                    </TextArea>
-                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="4" GridPane.vgrow="NEVER">
-                                       <GridPane.margin>
-                                          <Insets left="5.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font name="Noto Sans" size="13.0" />
-                                       </font>
-                                    </TextArea>
-                                    <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="5" GridPane.vgrow="NEVER">
-                                       <GridPane.margin>
-                                          <Insets left="5.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font name="Noto Sans" size="13.0" />
-                                       </font>
-                                    </TextArea>
                                     <Label alignment="CENTER" contentDisplay="CENTER" text="Κατηγορία" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="Noto Sans" size="13.0" />
@@ -158,9 +111,57 @@
                                           <Insets left="5.0" />
                                        </GridPane.margin>
                                     </ChoiceBox>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="4" GridPane.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="5" GridPane.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Noto Sans" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                    </TextField>
                                  </children>
                               </GridPane>
-                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: #0093cf;" text="Προσθήκη" textAlignment="CENTER" textFill="WHITE">
+                              <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: #0093cf;" text="Προσθήκη" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                                  <font>
                                     <Font name="Noto Sans" size="13.0" />
                                  </font>
@@ -192,7 +193,7 @@
                                  </font>
                               </Label>
                               <Rectangle fill="#8c8c8c" height="150.0" smooth="false" stroke="BLACK" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="0.0" width="300.0" />
-                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: #0093cf;" text="Επιλογή Αρχείου" textAlignment="CENTER" textFill="WHITE">
+                              <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: #0093cf;" text="Επιλογή Αρχείου" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                                  <font>
                                     <Font name="Noto Sans" size="13.0" />
                                  </font>
@@ -241,7 +242,7 @@
                                     </Label>
                                  </children>
                               </GridPane>
-                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: #0093cf;" text="Προσθήκη" textAlignment="CENTER" textFill="WHITE">
+                              <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: #0093cf;" text="Προσθήκη" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                                  <font>
                                     <Font name="Noto Sans" size="13.0" />
                                  </font>

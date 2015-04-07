@@ -1,5 +1,0 @@
-package taxislogins;
-
-class FileParser {
-
-}

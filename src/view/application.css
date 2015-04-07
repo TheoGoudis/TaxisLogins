@@ -29,3 +29,7 @@
 	-fx-alignment: CENTER;
 	-fx-text-fill: white;
 }
+
+.button:focused {
+    -fx-focus-color: grey;
+}
